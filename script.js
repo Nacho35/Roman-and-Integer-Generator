@@ -9,14 +9,38 @@ function convert() {
 	const integer = inputInteger.value;
 
 	if (roman !== "") {
+		if (!isValidRoman(roman)) {
+			resultParagraph.textContent = "Invalid Roman numeral entered";
+			return;
+		}
 		const integerResult = romanToInt(roman);
-		resultParagraph.textContent = `The Roman numeral ${roman} is equal to ${integerResult}`;
+		resultParagraph.textContent = `The Roman numeral ${roman} is equal to ${integerResult} in integers`;
 	} else if (integer !== "") {
+		if (isNaN(integer) || integer < 1) {
+			resultParagraph.textContent = "Invalid integer value entered";
+			return;
+		}
 		const romanResult = intToRoman(parseInt(integer));
-		resultParagraph.textContent = `The integer ${integer} is equal to ${romanResult}`;
+		resultParagraph.textContent = `The integer ${integer} is equal to ${romanResult} in Roman`;
 	} else {
 		resultParagraph.textContent = "Please enter a Roman numeral or an integer";
 	}
+}
+
+function isValidRoman(roman) {
+	const validChars = ["I", "V", "X", "L", "C", "D", "M"];
+	for (let i = 0; i < roman.length; i++) {
+		if (!validChars.includes(roman[i])) {
+			return false;
+		}
+	}
+	return true;
+}
+
+function reset() {
+	inputRoman.value = "";
+	inputInteger.value = "";
+	resultParagraph.textContent = "";
 }
 
 // Funciones para convertir de romano a entero y viceversa
