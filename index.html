@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<title>Numerals Converter</title>
+	</head>
+	<body>
+		<div class="container">
+			<div class="title-container">
+				<h1 class="title">Roman And Integer Converter</h1>
+			</div>
+			<div class="fields">
+				<input
+					placeholder="Enter your roman number"
+					class="input"
+					name="text"
+					oninput="this.value = this.value.toUpperCase()"
+					type="text" />
+				<span>
+					<p class="or-text">OR</p>
+				</span>
+				<input
+					type="number"
+					class="input"
+					name="number"
+					placeholder="Enter your integer number" />
+			</div>
+			<div class="btn-container">
+				<button class="button" onclick="convert()">
+					<span class="button-content">CONVERT</span>
+				</button>
+			</div>
+			<div class="result result-hidden">
+				<p class="paragraph" id="result"></p>
+			</div>
+			<footer>
+				<p>
+					Develped By:
+					<a href="https://github.com/Nacho35">Ignacio Morales</a>
+				</p>
+			</footer>
+		</div>
+	</body>
+	<script src="script.js"></script>
+</html>

@@ -1,0 +1,162 @@
+:root {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	background-color: #212121;
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	padding: 1rem;
+}
+
+.title-container {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+}
+
+.title {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 2.5rem;
+	font-weight: semibold;
+	color: rgb(249, 255, 85);
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.fields {
+	display: flex;
+	flex-direction: column;
+}
+
+input {
+	margin: 10px 0 10px 0;
+}
+
+.input {
+	background-color: #212121;
+	max-width: 190px;
+	height: 30px;
+	padding: 10px;
+	border: 2px solid white;
+	color: white;
+	border-radius: 5px;
+	box-shadow: 3px 3px 2px rgb(249, 255, 85);
+}
+
+.input:focus {
+	color: rgb(0, 255, 255);
+	background-color: #212121;
+	outline-color: rgb(0, 255, 255);
+	box-shadow: -3px -3px 15px rgb(0, 255, 255);
+	transition: 0.1s;
+	transition-property: box-shadow;
+}
+
+.btn-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 1rem 0 1rem 0;
+	flex-direction: column;
+}
+
+.button {
+	position: relative;
+	overflow: hidden;
+	height: 3rem;
+	padding: 0 2rem;
+	border-radius: 1.5rem;
+	background: #333;
+	background-size: 400%;
+	color: #fff;
+	border: none;
+	cursor: pointer;
+}
+
+.button:hover::before {
+	transform: scaleX(1);
+}
+
+.button-content {
+	position: relative;
+	z-index: 1;
+}
+
+.button::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	transform: scaleX(0);
+	transform-origin: 0 50%;
+	width: 100%;
+	height: inherit;
+	border-radius: inherit;
+	background: linear-gradient(
+		82.3deg,
+		rgba(150, 93, 233, 1) 10.8%,
+		rgba(99, 88, 238, 1) 94.3%
+	);
+	transition: all 0.475s;
+}
+
+.result {
+	text-align: center;
+	border: 2px solid rgb(0, 255, 255);
+	border-radius: 5px;
+	padding: 10px;
+	box-shadow: 3px 3px 2px rgb(0, 255, 255);
+}
+
+.result-hidden {
+	display: none;
+}
+
+.paragraph {
+	font-size: 2.5rem;
+	font-weight: semibold;
+	color: rgb(0, 255, 255);
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.or-text {
+	font-size: 1rem;
+	font-weight: semibold;
+	color: rgb(0, 255, 255);
+	text-align: center;
+}
+
+footer {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #212121;
+	color: #fff;
+	font-size: 1rem;
+}
+
+a {
+	color: rgb(0, 255, 255);
+	text-decoration: none;
+	font-weight: semibold;
+	transition: 0.1s;
+	transition-property: color;
+	text-emphasis: overline;
+}
